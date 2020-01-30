@@ -1,0 +1,13 @@
+/*  cy.visit('conexaopanvel.faccat.br')
+    cy.get('.menu-item-207').click()
+    expect(true).to.equal(true)
+    cy.get('.action-email').type('fake@email.com').
+        should('have.value', 'fake@email.com')    
+    cy.url().should('include', '/panvel/main.do')
+    cy.get('.autocomplete-input').click().type('cotonete{enter}')
+    cy.contains('type').click()     
+    cy.contains('Hastes Flexiveis Panvel C/150 Unidades').click()
+    cy.wait(4000)
+   
+    
+*/
