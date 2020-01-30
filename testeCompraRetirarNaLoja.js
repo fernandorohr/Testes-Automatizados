@@ -2,7 +2,7 @@
 
 describe("retirar na loja", function(){
     it("retirar item na loja física", function(){
-        //Acessa o usuário ISAAC
+        // Access user ISAAC
         cy.visit("https://www.panvel.com")
         cy.wait(1000)
         cy.reload(true)
@@ -16,7 +16,7 @@ describe("retirar na loja", function(){
         cy.get('button[id="btn-next-step"]').click()
         cy.get('span[class="navbar__menu-login--text nav-menu__item--actived"]').contains('ISAAC')
         cy.wait(500)
-        //Escolhe o produto e adiciona ao carrinho
+        // Choose the product and add it to cart
         cy.get('[name = search]').click().type('pastilha vick')
         cy.wait(1200)
         cy.get('[name = search]').click().type('{enter}')
@@ -38,10 +38,7 @@ describe("retirar na loja", function(){
         cy.get('button[data-click="checkout-pagamento"]').click()
         cy.wait(1000)
         cy.get('button[data-pagamento="CARTAO_CREDITO"]').click()
-        cy.wait(1000)
-        // Nome do cartão foi removido do site
-        //cy.get('input[id="input-card-name"]')
-        //  .type('Isaac Isaco Isaque')         
+        cy.wait(1000)   
         cy.get('input[id="input-card-number"]').type('4916823881703714')
         cy.wait(500)
         cy.get('select[name="input-card-month-expiry"]').select('05')
