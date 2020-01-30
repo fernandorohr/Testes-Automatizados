@@ -1,13 +1,13 @@
 ///<reference types="Cypress" />
 
-var Chance = require('chance');
-var chance = new Chance();
-
 var randomstring = require("randomstring");
 
 var randomEmail = require('random-email');
 
 const CPF = require('cpf-check');
+
+//Test that creates a new user, generating random information (name, cpf and email)
+
 
 describe("efetuar cadastro", function(){
     it("efetuar cadastro", function(){
