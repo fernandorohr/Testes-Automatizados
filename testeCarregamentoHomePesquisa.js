@@ -1,5 +1,7 @@
 ///<reference types="Cypress"/>
 
+// Tests the loading of home page and the search
+
 describe("testeCarregamentoHome", function() {
     it("Testa elementos carregados na Home", function(){
         cy.visit("http://www.panvel.com")
@@ -34,7 +36,13 @@ describe("testeCarregamentoHome", function() {
         cy.get('form').within(() => {
             cy.get('input[name="email"]').should('be.visible')
             cy.get('button[class="btn btn--no-bg"]').should('be.visible')
-        })        
+        })
+        
+        // Search and add to basket
+        cy.get('[name = search]').click().type('fralda{enter}')
+        cy.contains('ADICIONAR À CESTA').click()
+        cy.visit('https://www.panvel.com/panvel/login.do')
+
         Cypress.on('uncaught:exception', (err, runnable) => {
             return false
         })
