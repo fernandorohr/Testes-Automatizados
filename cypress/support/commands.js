@@ -33,10 +33,18 @@ Cypress.Commands.add('subCategoria', (indiceSub, indiceCategoria) => {
 })
 
 Cypress.Commands.add('verificaConteudo', (tamanhoProdutosCategoria, ) => {
-    cy.get('section[class="results results--reduced"] div[class="pure-g"]').then(($conteudo) => {
+    cy.get('section[class="results results--reduced"] div[class="pure-g pure-g--relative"]').then(($conteudo) => {
         tamanhoProdutosCategoria = $conteudo[0];
-        const $conteudoVetor = Cypress.$(tamanhoProdutosCategoria)
-        const conteudoTamanho = $conteudoVetor.context.childElementCount;
+        
+        console.log("TAMANHOPRODUTOSS")
+        console.log(tamanhoProdutosCategoria)
+
+        const $conteudoVetor = Cypress.$(tamanhoProdutosCategoria)        
+
+        const conteudoTamanho = $conteudoVetor.childElementCount;
+        console.log("Tamanho ")
+        console.log(conteudoTamanho)
+
         console.log("A subcategoria possui : " + conteudoTamanho + " Produtos")
         if (conteudoTamanho < 1) {
             cy.url().then(($URL) => {
