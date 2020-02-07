@@ -3,6 +3,7 @@
 describe('teste busca e-commerce panvel', function(){
     it('testa busca', () => {
         cy.visit("http://www.panvel.com")
+        
         cy.get('input[name="search"]')
           .type('desodorante{enter}')
           .should('have.value', 'desodorante')
