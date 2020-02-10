@@ -9,20 +9,11 @@ class MeusDadosPage {
     cy.visit(url)
   }
 
-  fazerLogin() {
-    cy.get('span[class="navbar__menu-login--text"]').click()
-    cy.wait(1000)
-    cy.get('input[id="input-usuario"]')
-      .type('testedimed@gmail.com')         
-    cy.get('input[name="senha"]').type('teste123!')
-    cy.wait(500)
-    cy.get('button[id="btn-next-step"]').click()
-  }
-  
   acessarMinhaConta() {
-    cy.get(meusDadosElements.textName()).contains('ISAAC')
-    cy.get(meusDadosElements.dropDownNavbarName()).trigger('mouseenter')
-    cy.contains('Minha Conta').should('be.hidden').invoke('show').click({ force:true }) 
+    cy.get(meusDadosElements.loginUsuario()).click()
+        cy.get(meusDadosElements.usuario()).type('testedimed@gmail.com')
+        cy.get(meusDadosElements.senha()).type('teste123!')
+        cy.get(meusDadosElements.loginButton()).click()
   }
 
   verificarDadosMinhaConta() {
@@ -35,7 +26,6 @@ class MeusDadosPage {
     cy.contains('CONVÊNIOS').should('be.visible')
     cy.contains('ÚLTIMA AVALIAÇÃO').should('be.visible')
 
-    // Entender essa função
     Cypress.on('uncaught:exception', (err, runnable) => {
       return false
     })

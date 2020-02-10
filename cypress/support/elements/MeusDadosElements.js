@@ -1,7 +1,8 @@
 class MeusDadosElements { 
-  loginBtn = () => { return 'a[title="Login"]' }
-  textName = () => { return 'span[class="navbar__menu-login--text nav-menu__item--actived"]' }
-  dropDownNavbarName = () => { return 'div[class="navbar__menu-login navbar__menu-login-dropdown"]' }
+  loginUsuario = () => {return 'span[class="navbar__menu-login--text"]'}
+  usuario = () => {return 'input[id="input-usuario"]'}
+  senha = () => {return 'input[name="senha"]'}
+  loginButton = () => {return 'button[id="btn-next-step"]'}
   sectionMeusDados = () => { return 'div[class="results"]' }
   atualizarMeusDados = () => { return 'a[class="btn btn--no-bg btn--icon btn--icon--right btn--text-right"]' }
 }
