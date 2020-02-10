@@ -1,0 +1,7 @@
+{
+    "chromeWebSecurity": false,
+    "viewportWidth": 1300,
+    "viewportHeight": 660,
+    "defaultCommandTimeout": 10000,
+    "baseUrl": "https://www.panvel.com/panvel/main.do"
+}
