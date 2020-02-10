@@ -18,14 +18,21 @@ class cadastroNovoEndereco {
         cy.get(CadastroEnderecoElements.search()).click().type('pastilha vick {enter}')
         cy.get(CadastroEnderecoElements.pastilhaVick()).click()
         cy.contains(CadastroEnderecoElements.buy()).click()
+        cy.wait(1200)
     }
 
     //Change Address
-    mudarEndereco(){
+    novoEndereco(){
         cy.get(CadastroEnderecoElements.delivery()).click()
         cy.get(CadastroEnderecoElements.deliveryButton()).click()
         cy.get(CadastroEnderecoElements.deliveryHome()).click()
         cy.get(CadastroEnderecoElements.addAddress()).click()
+        cy.get(CadastroEnderecoElements.stName()).type('Rua do Isaac')
+        cy.get(CadastroEnderecoElements.cep()).type('95612150')
+        cy.get(CadastroEnderecoElements.houseNumber()).type('4500')
+        cy.get(CadastroEnderecoElements.complement()).type('Casa')
+        cy.get(CadastroEnderecoElements.reference()).type('ERS 115')
+        cy.contains("Adicionar Endereço").click()
 
     }
 }
