@@ -1,9 +1,9 @@
 /// <reference types="Cypress" />
 
 import CarregamentoHomeElements from '../elements/CarregamentoHomeElements'
-import GlobalElements from '../elements/GlobalElements'
+//import GlobalElements from '../elements/GlobalElements'
 const carregamentoElements = new CarregamentoHomeElements
-const globalElements = new GlobalElements
+//const globalElements = new GlobalElements
 
 class CarregamentoHomePage {
     visualizarElementos(){
@@ -28,13 +28,6 @@ class CarregamentoHomePage {
         cy.get(carregamentoElements.footer()).should('be.visible')
         //Newsletter
         cy.get(carregamentoElements.newsletter()).should('be.visible')
-    }
-
-    adicionarItem(){
-        //Search and add to basket
-        cy.get(globalElements.search()).click().type('fralda{enter}')
-        cy.contains(carregamentoElements.basket()).click()
-        cy.visit('https://www.panvel.com/panvel/login.do')
     }
 }
 

@@ -21,10 +21,6 @@ class carregamentoHomeElements{
     footer = () => {return 'footer[class="footer pure-g"]'}
     //Newsletter
     newsletter = () => {return 'input[name="email"]'}
-    //Search
-    search = () => {return '[name = search]'}
-    //Basket
-    basket = () => {return 'ADICIONAR À CESTA'}  
 }
 
 export default carregamentoHomeElements;
