@@ -1,16 +1,16 @@
 /* global Given, Then, When */
 
 import cadastroNovoEndereco from '../pageobjects/cadastroNovoEndereco'
-import carregamentoHome from '../pageobjects/carregamentoHome'
+import GlobalPage from '../pageobjects/GlobalPage'
 const CadastroNovoEndereco = new cadastroNovoEndereco
-const carregarSite = new carregamentoHome
+const globalPage = new GlobalPage
 
 Given ("acessa o site", () => {
-    carregarSite.acessarSite();
+    globalPage.acessarSite();
 })
 
 When ("acessa a conta do usuario", () => {
-    CadastroNovoEndereco.acessarUsuario();
+    globalPage.acessarUsuario();
 })
 
 And ("adiciona um produto ao carrinho", () => {

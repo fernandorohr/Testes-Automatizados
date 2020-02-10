@@ -1,5 +1,3 @@
-
-
 class cadastroEnderecoElements {
     //User Login
     loginUser = () => {return 'span[class="navbar__menu-login--text"]'}
@@ -8,9 +6,8 @@ class cadastroEnderecoElements {
     loginButton = () => {return 'button[id="btn-next-step"]'}
 
     //Add 'pastilha vick' to basket
-    search = () => {return '[name = search]'}
+    //search = () => {return '[name = search]'}
     pastilhaVick = () => {return 'a[href="/panvel/pastilha-vick-cereja-c-5-avulso/p-345962"]'}
-    buy = () => {return 'COMPRAR'}
 
     //Add address
     delivery = () => {return 'a[href="/panvel/informarEntrega.do"]'}

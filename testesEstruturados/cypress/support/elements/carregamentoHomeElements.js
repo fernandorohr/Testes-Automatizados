@@ -24,8 +24,7 @@ class carregamentoHomeElements{
     //Search
     search = () => {return '[name = search]'}
     //Basket
-    basket = () => {return 'ADICIONAR À CESTA'}
-    
+    basket = () => {return 'ADICIONAR À CESTA'}  
 }
 
 export default carregamentoHomeElements;
