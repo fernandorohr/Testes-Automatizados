@@ -5,7 +5,7 @@ const CadastroEnderecoElements = new cadastroEnderecoElements
 
 class cadastroNovoEndereco {
     //Faz login da conta do usuario
-    acessarUsuario(){
+    loginUsuario(){
         cy.get(CadastroEnderecoElements.loginUser()).click()
         cy.get(CadastroEnderecoElements.user()).type('testedimed@gmail.com')
         cy.get(CadastroEnderecoElements.password()).type('teste123!')

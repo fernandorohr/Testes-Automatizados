@@ -1,7 +1,6 @@
 {
-	"viewportWidth": 1330,
-	"viewportHeight": 680,
-	"projectid": "uv4xm4",
+	"viewportWidth": 1300,
+	"viewportHeight": 660,
 	"defaultComandTimeout": 10000,
 	"baseUrl": "https://www.panvel.com/panvel/main.do",
 	"chromeWebSecurity": false

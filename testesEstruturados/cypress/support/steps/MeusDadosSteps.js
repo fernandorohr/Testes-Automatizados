@@ -1,14 +1,16 @@
 /* global Given, Then, When, And */
 
 import MeusDadosPage from '../pageobjects/MeusDadosPage'
+import GlobalPage from '../pageobjects/GlobalPage'
 const meusDadosPage = new MeusDadosPage
+const globalPage = new GlobalPage
 
 Given("acesso o site Panvel", () => {
-  meusDadosPage.acessarSite();
+  globalPage.acessarSite();
 })
 
 When("acesso minha conta", () => {
-  meusDadosPage.acessarMinhaConta();
+  globalPage.loginUsuario();
 })
 
 Then("devo verificar os dados na minha conta", () => {
