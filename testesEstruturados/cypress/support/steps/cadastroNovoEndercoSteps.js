@@ -10,13 +10,13 @@ Given ("acessa o site", () => {
 })
 
 When ("acessa a conta do usuario", () => {
-    carregarSite.acessarUsuario();
+    CadastroNovoEndereco.acessarUsuario();
 })
 
 And ("adiciona um produto ao carrinho", () => {
-    carregarSite.adicionarItem();
+    CadastroNovoEndereco.adicionarItem();
 })
 
 Then ("cadastra novo endereco", () => {
-    carregarSite.novoEndereco();
+    CadastroNovoEndereco.novoEndereco();
 })
