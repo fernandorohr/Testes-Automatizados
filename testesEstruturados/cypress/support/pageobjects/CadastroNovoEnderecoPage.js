@@ -1,23 +1,15 @@
 /// <reference types="Cypress" />
 
-import CadastroEnderecoElements from '../elements/CadastroNovoEnderecoElements'
+import CadastroNovoEnderecoElements from '../elements/CadastroNovoEnderecoElements'
 import GlobalElements from '../elements/GlobalElements'
-const cadastroEnderecoElements = new CadastroEnderecoElements
+const cadastroEnderecoElements = new CadastroNovoEnderecoElements
 const globalElements = new GlobalElements
 
 class CadastroNovoEnderecoPage {
-     //Add 'pastilha vick' to basket
-     adicionarItem(){
-        cy.get(cadastroEnderecoElements.loginTextActived()).contains('ISAAC')
-        cy.get(globalElements.search()).click().type('pastilha vick {enter}')
-        cy.get(cadastroEnderecoElements.pastilhaVick()).click()
-        cy.contains("COMPRAR").click()
-        cy.wait(1200)
-    }
 
     //Change Address
     novoEndereco(){
-        cy.get(cadastroEnderecoElements.delivery()).click()
+        cy.get(globalElements.delivery()).click()
         cy.get(cadastroEnderecoElements.deliveryButton()).click()
         cy.get(cadastroEnderecoElements.deliveryHome()).click()
         cy.get(cadastroEnderecoElements.addAddress()).click()

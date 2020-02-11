@@ -11,9 +11,9 @@ class MeusDadosPage {
 
   acessarMinhaConta() {
     cy.get(meusDadosElements.loginUsuario()).click()
-        cy.get(meusDadosElements.usuario()).type('testedimed@gmail.com')
-        cy.get(meusDadosElements.senha()).type('teste123!')
-        cy.get(meusDadosElements.loginButton()).click()
+    cy.get(meusDadosElements.usuario()).type('testedimed@gmail.com')
+    cy.get(meusDadosElements.senha()).type('teste123!')
+    cy.get(meusDadosElements.loginButton()).click()
   }
 
   verificarDadosMinhaConta() {

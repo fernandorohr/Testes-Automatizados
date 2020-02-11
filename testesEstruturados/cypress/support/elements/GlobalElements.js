@@ -4,6 +4,8 @@ class GlobalElements {
   senha = () => {return 'input[name="senha"]'}
   loginButton = () => {return 'button[id="btn-next-step"]'}
   search = () => {return '[name = search]'}
+  delivery = () => {return 'a[href="/panvel/informarEntrega.do"]'}
+  
 }
 
 export default GlobalElements;
