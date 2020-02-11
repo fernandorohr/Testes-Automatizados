@@ -1,4 +1,4 @@
-/* global Given, Then, When, And */
+/* global Given, Then, When */
 
 import MeusDadosPage from '../pageobjects/MeusDadosPage'
 import GlobalPage from '../pageobjects/GlobalPage'

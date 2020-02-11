@@ -16,7 +16,14 @@ class GlobalPage {
     cy.get(globalElements.usuario()).type('testedimed@gmail.com')
     cy.get(globalElements.senha()).type('teste123!')
     cy.get(globalElements.loginButton()).click()
+<<<<<<< HEAD
     cy.wait(1500)
+=======
+    
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      return false
+    })
+>>>>>>> c200f7d0eca35405cdb43131ca0bf2748001a978
   }
 
 

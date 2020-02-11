@@ -1,4 +1,5 @@
 class GlobalElements { 
+<<<<<<< HEAD
   loginUsuario = () => {return 'span[class="navbar__menu-login--text"]'}
   usuario = () => {return 'input[id="input-usuario"]'}
   senha = () => {return 'input[name="senha"]'}
@@ -6,6 +7,14 @@ class GlobalElements {
   search = () => {return '[name = search]'}
   delivery = () => {return 'a[href="/panvel/informarEntrega.do"]'}
   
+=======
+  loginUsuario = () => { return 'span[class="navbar__menu-login--text"]' }
+  usuario = () => { return 'input[id="input-usuario"]' }
+  senha = () => { return 'input[name="senha"]' }
+  loginButton = () => { return 'button[id="btn-next-step"]' }
+  
+  search = () => { return '[name = search]' }
+>>>>>>> c200f7d0eca35405cdb43131ca0bf2748001a978
 }
 
 export default GlobalElements;
