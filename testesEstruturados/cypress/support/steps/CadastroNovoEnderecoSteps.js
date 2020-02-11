@@ -1,4 +1,4 @@
-/* global Given, Then, When */
+/* global Given, Then, And, When */
 
 import CadastroNovoEnderecoPage from '../pageobjects/CadastroNovoEnderecoPage'
 import GlobalPage from '../pageobjects/GlobalPage'
