@@ -1,8 +1,8 @@
 /* global Given, Then, And, When */
 
-import CadastroNovoEnderecoPage from '../pageobjects/CadastroNovoEnderecoPage'
+import CompraLockerPage from '../pageobjects/CompraLockerPage'
 import GlobalPage from '../pageobjects/GlobalPage'
-const cadastroNovoEndereco = new CadastroNovoEnderecoPage
+const compraLockerPage = new CompraLockerPage
 const globalPage = new GlobalPage
 
 Given ("acesso o site Panvel", () => {
@@ -14,9 +14,9 @@ When ("acesso minha conta", () => {
 })
 
 And ("adiciona um produto ao carrinho", () => {
-    globalPage.adicionarItem();
+  globalPage.adicionarItem();
 })
 
-Then ("cadastra novo endereco", () => {
-    cadastroNovoEndereco.novoEndereco();
+Then ("realiza a compra por locker", () => {
+  compraLockerPage.compraLocker();
 })

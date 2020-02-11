@@ -2,7 +2,6 @@ class CadastroNovoEnderecoElements {
 
     //Add 'pastilha vick' to basket
     //loginTextActived = () => { return 'span[class="navbar__menu-login--text nav-menu__item--actived"]'}
-    pastilhaVick = () => {return 'a[href="/panvel/pastilha-vick-cereja-c-5-avulso/p-345962"]'}
 
     //Add address  
     deliveryButton = () => {return 'button[class="btn btn--big btn--big-left btn--color-green btn--text-bold btn--icon btn--icon--right btn--flutuante"]'}  
