@@ -2,7 +2,7 @@
 
 import CadastroNovoEnderecoPage from '../pageobjects/CadastroNovoEnderecoPage'
 import GlobalPage from '../pageobjects/GlobalPage'
-const cadastroNovoEndereco = new CadastroNovoEnderecoPage
+const cadastroNovoEnderecoPage = new CadastroNovoEnderecoPage
 const globalPage = new GlobalPage
 
 Given ("acesso o site Panvel", () => {
@@ -14,9 +14,9 @@ When ("acesso minha conta", () => {
 })
 
 And ("adiciona um produto ao carrinho", () => {
-    globalPage.adicionarItem();
+    globalPage.adicionarProduto();
 })
 
 Then ("cadastra novo endereco", () => {
-    cadastroNovoEndereco.novoEndereco();
+    cadastroNovoEnderecoPage.novoEndereco();
 })

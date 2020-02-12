@@ -1,11 +1,11 @@
-/* global Given, Then, When */
+/* global Given, Then, When, And */
 
 import CompraRetirarNaLojaPage from '../pageobjects/CompraRetirarNaLojaPage'
 import GlobalPage from '../pageobjects/GlobalPage'
 const compraRetirarNaLojaPage = new CompraRetirarNaLojaPage
 const globalPage = new GlobalPage
 
-Given ("acesso o site panvel", () => {
+Given ("acesso o site Panvel", () => {
     globalPage.acessarSite();
 })
 
@@ -14,9 +14,13 @@ When ("acessa minha conta", () => {
 })
 
 And ("adiciona um produto ao carrinho", () => {
-    globalPage.adicionarItem();
+    globalPage.adicionarProduto();
+})
+
+And ("seleciona forma de entrega", () => {
+    compraRetirarNaLojaPage.compraRetirarNaLoja();
 })
 
 Then ("finaliza a compra", () => {
-    compraRetirarNaLojaPage.retirarNaLoja();
+    globalPage.finalizarCompra();
 })

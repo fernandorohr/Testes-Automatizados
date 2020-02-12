@@ -2,7 +2,7 @@
 
 import CadastroNovoUsuarioPage from '../pageobjects/CadastroNovoUsuarioPage'
 import GlobalPage from '../pageobjects/GlobalPage'
-const cadastroNovoUsuario = new CadastroNovoUsuarioPage
+const cadastroNovoUsuarioPage = new CadastroNovoUsuarioPage
 const globalPage = new GlobalPage
 
 Given ("acesso o site Panvel", () => {
@@ -10,9 +10,9 @@ Given ("acesso o site Panvel", () => {
 })
 
 When ("acesso a pagina criar conta", () => {
-  cadastroNovoUsuario.acessarPaginaLogin();
+  cadastroNovoUsuarioPage.acessarPaginaLogin();
 })
 
 Then ("cadastro meus dados", () => {
-  cadastroNovoUsuario.criarConta();
+  cadastroNovoUsuarioPage.criarConta();
 })

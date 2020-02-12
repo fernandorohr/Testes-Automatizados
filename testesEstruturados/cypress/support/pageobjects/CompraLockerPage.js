@@ -7,21 +7,11 @@ const globalElements = new GlobalElements
 
 class CompraLocker {
   compraLocker() {
-    cy.get(compraLockerElements.informarEntrega()).click()
-    cy.get(compraLockerElements.botaoFlutuante()).click()
-    cy.get(compraLockerElements.botaoEntregaLocker()).click()    
-    cy.get(compraLockerElements.botaoIdentificadorLocker()).click()
-    cy.get(compraLockerElements.confirmarEntregaLocker()).click()    
-    cy.get(compraLockerElements.checkoutPagamento()).click()
-    cy.wait(1000)
-    cy.get(compraLockerElements.cartaoCredito()).click()
-    cy.wait(1000)
-    cy.get(compraLockerElements.cardNumber()).type('4916823881703714')    
-    cy.get(compraLockerElements.cardMonthExpiry()).select('05')    
-    cy.get(compraLockerElements.cardExpiry()).select('2020')
-    cy.get(compraLockerElements.cardCvc()).type('297')
-    cy.contains('CONFIRMAR PAGAMENTO').click()
-    cy.get(compraLockerElements.finalizarCompra()).click()
+    cy.get(globalElements.basket()).click()
+    cy.get(globalElements.deliverySelect()).click()
+    cy.get(compraLockerElements.deliveryLockerBtn()).click()    
+    cy.get(compraLockerElements.identifierLockerBtn()).click()
+    cy.get(compraLockerElements.deliveryConfirmLocker()).click()    
   }
 }
 

@@ -14,9 +14,13 @@ When ("acesso minha conta", () => {
 })
 
 And ("adiciona um produto ao carrinho", () => {
-  globalPage.adicionarItem();
+  globalPage.adicionarProduto();
 })
 
-Then ("realiza a compra por locker", () => {
+And ("seleciona forma de entrega", () => {
   compraLockerPage.compraLocker();
+})
+
+Then ("finaliza a compra", () => {
+  globalPage.finalizarCompra();
 })

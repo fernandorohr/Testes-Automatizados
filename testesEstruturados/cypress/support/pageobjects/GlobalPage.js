@@ -10,10 +10,10 @@ class GlobalPage {
   }
 
   loginUsuario() {
-    cy.get(globalElements.loginUsuario()).click()
-    cy.get(globalElements.usuario()).type('testedimed@gmail.com')
-    cy.get(globalElements.senha()).type('teste123!')
-    cy.get(globalElements.loginButton()).click()
+    cy.get(globalElements.loginUser()).click()
+    cy.get(globalElements.user()).type('testedimed@gmail.com')
+    cy.get(globalElements.password()).type('teste123!')
+    cy.get(globalElements.loginBtn()).click()
     cy.wait(1500)
 
     Cypress.on('uncaught:exception', (err, runnable) => {
@@ -21,12 +21,24 @@ class GlobalPage {
     })
   }
 
-  adicionarItem(){
-    //cy.get(cadastroEnderecoElements.loginTextActived()).contains('ISAAC')
+  adicionarProduto(){
     cy.get(globalElements.search()).click().type('pastilha vick {enter}')
     cy.get(globalElements.pastilhaVick()).click()
     cy.contains("COMPRAR").click()
     cy.wait(1200)
+  }
+
+  finalizarCompra() {
+    cy.get(globalElements.payment()).click()
+    cy.wait(1000)
+    cy.get(globalElements.creditCard()).click()
+    cy.wait(1000)
+    cy.get(globalElements.cardNumber()).type('4916823881703714')    
+    cy.get(globalElements.cardMonthExpiry()).select('05')    
+    cy.get(globalElements.cardYearExpiry()).select('2020')
+    cy.get(globalElements.cardCvc()).type('297')
+    cy.contains('CONFIRMAR PAGAMENTO').click()
+    cy.get(globalElements.checkout()).click()
   }
 }
 
